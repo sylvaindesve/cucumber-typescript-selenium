@@ -1,7 +1,13 @@
-import { After, Status } from 'cucumber';
+import { After, Before, Status } from 'cucumber';
+import { Builder } from 'selenium-webdriver';
 import { WebTestingWorld } from './world';
 
-After(async function(scenario) {
+Before({tags: '@web'}, function() {
+  const world = this as WebTestingWorld;
+  world.driver = new Builder().forBrowser('chrome').build();
+});
+
+After({tags: '@web'}, async function(scenario) {
   const world = this as WebTestingWorld;
   const _this = this;
 

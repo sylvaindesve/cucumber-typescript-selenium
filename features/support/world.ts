@@ -11,9 +11,6 @@ export class WebTestingWorld implements World {
   constructor({attach, parameters}: {attach: Function, parameters: {[key: string]: any}}) {
     this.attach = attach;
     this.parameters = parameters;
-
-    this.driver = new Builder().forBrowser('chrome').build();
-    // this.driver = new Builder().forBrowser('firefox').build();
   }
 }
 

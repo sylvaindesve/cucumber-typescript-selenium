@@ -1,4 +1,5 @@
 # language: fr
+@web
 Fonctionnalité: Faire une recherche Google
 
   Plan du scénario: Un simple recherche
