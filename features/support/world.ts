@@ -1,10 +1,12 @@
 // tslint:disable:ban-types
 import { setWorldConstructor, World } from 'cucumber';
-import { Builder, WebDriver } from 'selenium-webdriver';
+import { WebDriver } from 'selenium-webdriver';
+import { Calculatrice } from '../../src/calculatrice';
 
 export class WebTestingWorld implements World {
 
   public driver: WebDriver;
+  public calculatrice: Calculatrice;
   public attach: Function;
   public parameters: {[key: string]: any};
 
